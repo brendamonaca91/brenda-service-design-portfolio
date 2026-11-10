@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  doc-page:not(:defined){visibility:hidden}
+  body{margin:0}
+  a{color:#6D4AFF;text-decoration:none}
+  a:hover{text-decoration:underline}
+
+  .cv{font-family:'Roboto',sans-serif;color:#333;font-size:12.5px;line-height:1.5}
+  .cv h1{font-family:'Space Grotesk';font-weight:700;font-size:34px;letter-spacing:-.02em;margin:0 0 4px;color:#16161C}
+  .cv .title{font-weight:500;font-size:15px;letter-spacing:.04em;text-transform:uppercase;color:#6D4AFF;margin-bottom:12px}
+  .cv .contact{font-size:12.5px;line-height:1.6;color:#55555F;display:flex;flex-wrap:wrap;gap:4px 18px;border-bottom:2px solid #16161C;padding-bottom:16px;margin-bottom:18px}
+  .cv h2{font-weight:700;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:#16161C;margin:18px 0 8px;padding-bottom:5px;border-bottom:1px solid #E2E2E8}
+  .cv h2:first-of-type{margin-top:0}
+  .cv p{margin:0 0 8px}
+  .cv ul{margin:0;padding-left:18px}
+  .cv li{margin-bottom:3px}
+  .cv ul ul{margin-top:5px;list-style:circle}
+  .cv .role{margin-bottom:12px;break-inside:avoid}
+  .cv .rh{display:flex;justify-content:space-between;gap:16px;align-items:baseline}
+  .cv .rt{font-weight:700;font-size:14px;color:#16161C}
+  .cv .rd{font-size:12px;color:#8C8C96;white-space:nowrap}
+  .cv .org{font-size:12.5px;color:#6D4AFF;font-weight:500;margin:2px 0 7px}
+  .cv .sub{font-weight:700;color:#16161C}
+  .cv .avoid{break-inside:avoid}
+  .cv .twocol{column-count:2;column-gap:36px}
+
+  @media screen and (max-width:720px){ .cv .twocol{column-count:1} }
+</style>
+<script>
+/* On phones, shrink the A4 sheet to fit the screen (screen only; print/PDF unaffected) */
+(function(){
+  var tag=document.createElement('style');document.head.appendChild(tag);
+  function fit(){var w=document.documentElement.clientWidth;var need=794+48;
+    tag.textContent=w<need?'@media screen{doc-page{zoom:'+(w/need).toFixed(4)+'}}':'';}
+  fit();window.addEventListener('resize',fit);
+})();
+</script>
+</helmet>
+
+<x-import component-from-global-scope="doc-page" from="./doc-page.js" size="a4" orientation="portrait" margin="0.6in" hint-size="100%,100%">
+<div class="cv">
+
+  <h1>Brenda Salazar</h1>
+  <div class="title">Service Designer</div>
+  <div class="contact">
+    <span>Norwood, South Australia</span>
+    <span>0466 918 011</span>
+    <span><a href="mailto:brendamonaca@gmail.com">brendamonaca@gmail.com</a></span>
+    <span><a href="https://www.linkedin.com/in/brenda-salazar-monaca/">LinkedIn</a></span>
+    <span><a href="https://brenda-service-design-portfolio.vercel.app/">Portfolio</a></span>
+  </div>
+
+  <h2>Professional summary</h2>
+  <p>Senior Designer with over 9 years of experience building end-to-end, human-centred technology solutions across the construction, banking, e-learning and international non-profit sectors. Proven track record of scaling regional programmes across 5 countries and 125+ trainees, growing a social innovation consultancy, and driving UX adoption across a 6,000+ employee organisation. Expert in service blueprinting, mixed-methods research and stakeholder co-creation, with a demonstrated ability to translate user needs into scalable, inclusive and sustainable service experiences.</p>
+
+  <h2>Professional experience</h2>
+
+  <div class="role">
+    <div class="rh"><span class="rt">Co-founder &amp; Adviser</span><span class="rd">Jan 2018 – Present</span></div>
+    <div class="org">Retarte Consulting · Lima, Peru (Remote)</div>
+    <ul>
+      <li>Co-founded Retarte Consulting after winning Best Social Responsibility Project (DARS), building it into a social innovation consultancy that uses art as a tool for social change; now generating $192K in annual revenue.</li>
+      <li>Grew operations across Lima, Piura and Arequipa, partnering with organisations on inclusion, environmental care and citizenship, and reaching 5,000+ people and 12 organisations to date.</li>
+      <li>Now serve in an advisory capacity, supporting strategic direction while the day-to-day is led by the founding team.</li>
+    </ul>
+  </div>
+
+  <div class="role">
+    <div class="rh"><span class="rt">Social Innovation Lead for Latin America &amp; the Caribbean (LAC)</span><span class="rd">May 2023 – Jun 2026</span></div>
+    <div class="org">Save the Children International · London, England (Remote, Contract)</div>
+    <ul>
+      <li>Scaled Shift, a social campaign accelerator model for youth, across 5 LAC country offices by aligning regional stakeholders and securing buy-in for rollout.</li>
+      <li>Built regional capacity by training 125+ country office team members in campaign development, storytelling and futures foresight methodologies, enabling them to guide youth through the social campaign acceleration model independently.</li>
+      <li>Contributed to the design of “AI-Brain”, an AI-powered tool supporting youth through their activism journey.</li>
+    </ul>
+  </div>
+
+  <div class="role">
+    <div class="rh"><span class="rt">Senior User Researcher</span><span class="rd">Aug 2021 – Jan 2023</span></div>
+    <div class="org">Preply · Barcelona, Spain (Hybrid)</div>
+    <ul>
+      <li>Led qualitative and quantitative research across 5 product squads (Localisation, Booking, Supply, Tutor Operations and Communications), shaping roadmap decisions for a unicorn e-learning platform.</li>
+      <li>Applied mixed methods (surveys, usability testing, diary studies, artefact collection, guerrilla research and interviews) to triangulate insights into actionable recommendations.</li>
+      <li>Scaled research operations for a 600+ employee organisation by co-building a research repository (Dovetail, Airtable and Notion) and introducing short-form video summaries, reducing time-to-insight and boosting research adoption.</li>
+    </ul>
+  </div>
+
+  <div class="role">
+    <div class="rh"><span class="rt">Senior User Experience &amp; Service Designer</span><span class="rd">Aug 2017 – Aug 2021</span></div>
+    <div class="org">Interbank · Lima, Peru (On-site)</div>
+    <ul>
+      <li>Led end-to-end UX and service design projects with Marketing, Operations, Innovation and UX teams, shaping communication strategy, key touchpoints and agile delivery across the bank.</li>
+      <li>Managed a team of 2 researchers to run A/B tests, usability studies, workshops and field research, building journey maps and service blueprints that combined qualitative and analytics data in line with GDPR standards.</li>
+      <li>Translated user insights into quarterly roadmap recommendations for digital products (apps, web, rewards, chatbot, SMS) serving 5.2M customers, contributing to NPS uplift and new-customer growth, while championing UX through leaders’ bootcamps across a 6,000+ employee organisation.</li>
+    </ul>
+  </div>
+
+  <div class="role">
+    <div class="rh"><span class="rt">Design Researcher</span><span class="rd">Jan 2017 – Jul 2017</span></div>
+    <div class="org">Cementos Pacasmayo · Lima, Peru (On-site)</div>
+    <ul>
+      <li>Researched global construction trends, innovations and emerging business opportunities for “La Cantera”, the innovation lab of northern Peru’s largest cement producer.</li>
+      <li>Supported fast-track innovation projects by translating external trends and insights into new concepts and initiatives.</li>
+      <li>Drove cultural change by promoting new ways of working across the organisation and launching the “La Cantera Innovation Fest”.</li>
+    </ul>
+  </div>
+
+  <h2>Core competencies</h2>
+  <ul>
+    <li><span class="sub">Leadership, self-management and collaboration:</span> Co-founded and led Retarte Consulting from securing funding to establishing a sustainable consultancy; led a team of researchers at Interbank; aligned stakeholders across 5 country offices to scale the Shift model regionally for Save the Children International.</li>
+    <li><span class="sub">Translating insights into actionable roadmaps:</span> Converted research findings into product roadmap decisions across 5 squads at Preply and multiple banking channels at Interbank, contributing to increased NPS and new-customer adoption.</li>
+    <li><span class="sub">Service prototyping and testing:</span> Experienced in designing probes and leading usability testing, A/B testing and mixed-methods testing (surveys, diary studies, guerrilla research) at Preply and Interbank to validate concepts before implementation.</li>
+    <li><span class="sub">Knowledge scalability, co-creation and facilitation:</span> Trained 125+ team members across 5 country offices at Save the Children, delivered UX bootcamps for leaders at Interbank, and trained 100+ professionals in human-centred design across 3 universities.</li>
+  </ul>
+
+  <h2>Key achievements</h2>
+  <ul>
+    <li>Selected by Interbank’s CEO to join a Box 3 discovery project with a team of 5, designing entirely new services to capture future markets and addressing the strategic challenge of offering a valuable financial alternative for the unbanked – from problem scoping through solution design and outcome measurement.</li>
+    <li>Selected to guide MIT students through the discovery phase of a joint thesis project with Meta and Interbank, leading user research and problem framing.</li>
+    <li>Hackathons:
+      <ul>
+        <li>2nd place, Preply internal hackathon (2022) – <em>Featured Tutors</em>, a concept to improve tutor discovery and visibility on the e-learning platform.</li>
+        <li>2nd place, Interbank internal hackathon (2020) – <em>Easy Mode</em>, a new app feature that simplified interfaces to improve accessibility.</li>
+        <li>Winner, UTEC &amp; Interbank hackathon (2017), which led to selection for Interbank’s one-year Digital Trainee programme.</li>
+      </ul>
+    </li>
+    <li>Speaker at the Agile Peru Congress (2018): “From Retrospectives to Neospectives”.</li>
+    <li>Finalist in the Student Service Design IKEA &amp; Philips Challenge (2024): <em>How might we turn the tide to enable more sustainable lives at home?</em> – <em>Furny Advisor</em>, an AI-assisted platform that simplifies selling, sharing and repairing used furniture.</li>
+    <li>Trained 100+ professionals in user research, customer experience and human-centred design at 3 universities in Peru: PUCP, UTEC and UPC.</li>
+  </ul>
+
+  <h2>Technical skills</h2>
+  <ul class="twocol">
+    <li><span class="sub">Research:</span> Dovetail, Airtable, Optimal Workshop, UserTesting, Qualtrics, Otter, Notebook, ChatGPT, Claude, Perplexity</li>
+    <li><span class="sub">Service blueprinting:</span> Smaply</li>
+    <li><span class="sub">Prototyping:</span> Figma, InVision, Principle, Framer, Marvel, Lovable</li>
+    <li><span class="sub">Design:</span> Claude Design, Claude Code, Canva</li>
+    <li><span class="sub">Analytics:</span> Google Analytics, Hotjar</li>
+    <li><span class="sub">Experimentation:</span> Maze</li>
+    <li><span class="sub">Collaboration:</span> Slack, Jira, Teams, Notion, Confluence, Miro, Mural, Trello, Calendly</li>
+  </ul>
+
+  <h2>Education</h2>
+  <div class="role">
+    <div class="rh"><span class="rt">Master’s in Service Design Strategies and Innovation</span><span class="rd">2023–2025</span></div>
+    <div class="org">Erasmus Mundus Joint Master’s Programme Scholar · Latvia, Estonia and Finland</div>
+    <p>Hands-on experience applying service design to real-world briefs in business strategy, behavioural design, strategy for sustainable transitions, foresight and systemic design.</p>
+    <p style="margin-bottom:4px"><span class="sub">Real-world client briefs:</span></p>
+    <ul>
+      <li><span class="sub">Riga International Airport</span> (2023): Redesign the airport’s waiting experience – <em>RIX PowerCart</em>, a comprehensive service redesign for a projected 30,000+ daily passengers at the new Rail Baltica airport terminal.</li>
+      <li><span class="sub">Tallinn City</span> (2024): Rethink access to secure, affordable homes for a fast-growing Tallinn – <em>Housing Lab</em>, a shared platform bringing together residents, the city and experts to co-create alternative housing solutions.</li>
+    </ul>
+    <p style="margin-top:8px"><span class="sub">Thesis:</span> Redefining Third Places Through a Service Design Approach to Strengthen Community Building, Well-Being and Work-Life Balance.</p>
+  </div>
+  <div class="role">
+    <div class="rh"><span class="rt">Bachelor’s in Communication for Social Development</span><span class="rd">2012–2017</span></div>
+    <div class="org">Pontificia Universidad Católica del Perú · Peru</div>
+    <p>Co-designed social projects with communities, using quantitative and qualitative methods for problem identification, to implement solutions communities could own and sustain.</p>
+  </div>
+
+  <h2>Professional development</h2>
+  <ul>
+    <li><span class="sub">AI Research &amp; Insights – Colectivo 23</span> (Online, 2026): Applied advanced prompt engineering to speed up research workflows, shifting focus from reporting insights to driving business decisions.</li>
+    <li><span class="sub">Agile Mindset – UCIC</span> (On-site, 2021): Led through powerful questioning, using agile principles and coaching to draw out team ideas rather than dictate answers.</li>
+    <li><span class="sub">Behavioural Economics for Innovation – Heurística Lab</span> (On-site, 2021): Applied heuristics and nudge theory to design a solution to the misuse of pregnancy parking spaces.</li>
+    <li><span class="sub">Futures Thinking &amp; Visual Thinking – Repensar Educativo</span> (On-site, 2020): Used foresight, scenario mapping and trend hunting to anticipate future needs, and visual thinking techniques to make ideas tangible and easy to communicate.</li>
+    <li><span class="sub">WOW Customer Experience – Toulouse Lautrec</span> (On-site, 2019): Moved beyond fixing pain points to intentionally designing memorable, share-worthy moments across the customer journey.</li>
+  </ul>
+
+  <div class="avoid">
+    <h2>Languages</h2>
+    <p>English · Spanish</p>
+    <h2>Referees</h2>
+    <p>Available upon request</p>
+  </div>
+
+</div>
+</x-import>
+</x-dc>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+<template id="__bundler_thumbnail" data-bg-color="#16161C">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#16161C"/>
+    <text x="600" y="360" font-family="Roboto, sans-serif" font-weight="900" font-size="150" fill="#FFFFFF" text-anchor="middle">BS</text>
+    <text x="600" y="470" font-family="Roboto, sans-serif" font-weight="500" font-size="42" letter-spacing="6" fill="#FFFFFF" text-anchor="middle" opacity="0.85">PORTFOLIO</text>
+  </svg>
+</template>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics="">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+  html{scroll-behavior:smooth}
+  body{margin:0;background:#FFFFFF;color:#16161C;font-family:'Space Grotesk',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  a.pj:hover{border-color:#6D4AFF !important}
+  a.pj:hover .arrow{transform:translateX(6px)}
+  .arrow{transition:transform .25s ease}
+  a.btn{transition:transform .2s ease,opacity .2s ease}
+  a.btn:hover{transform:translateY(-2px)}
+  @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+
+  @media (max-width:720px){[style*="margin:0 auto"],[style*="margin: 0px auto"]{padding-left:22px !important;padding-right:22px !important}
+    h1{font-size:46px !important}
+    h2{font-size:34px !important}[style*="repeat(4"]{grid-template-columns:repeat(2,1fr) !important}[style*="repeat(3"]{grid-template-columns:1fr !important;height:auto !important}[style*="repeat(3"] > *{margin-top:0 !important}[style*="1fr 1fr"]{grid-template-columns:1fr !important}[style*="gap:56px"],[style*="gap: 56px"]{gap:32px !important}
+  }
+
+  @media (max-width:720px){
+    a.pj{flex-direction:column}
+    a.pj > div:first-child{width:auto !important;flex-direction:row !important;align-items:center;justify-content:flex-start;gap:16px;padding:16px 22px !important}[style*="width:340px"],[style*="width: 340px"]{width:calc(100% - 18px) !important;max-width:340px;height:auto !important;aspect-ratio:340/420;margin-right:18px !important}[style*="left:-22px"],[style*="left: -22px"]{left:-8px !important}[style*="padding:96px 0 90px"],[style*="padding: 96px 0px 90px"]{padding:56px 0 60px !important;gap:48px !important}[style*="font-size:23px"],[style*="font-size: 23px"]{font-size:19px !important}[style*="padding:30px 34px"],[style*="padding: 30px 34px"]{padding:22px !important}[style*="padding:96px 40px"],[style*="padding: 96px 40px"]{padding-top:64px !important;padding-bottom:64px !important}
+  }
+
+  .navtoggle{display:none}
+  .hamburger{display:none}
+  @media (max-width:720px){
+    .hamburger{display:flex;flex-direction:column;justify-content:center;gap:5px;cursor:pointer;padding:8px;margin:-8px;z-index:30}
+    .hamburger span{display:block;width:24px;height:2px;background:#16161C;border-radius:2px;transition:transform .25s ease,opacity .2s ease}
+    .navtoggle:checked ~ .hamburger span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    .navtoggle:checked ~ .hamburger span:nth-child(2){opacity:0}
+    .navtoggle:checked ~ .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+    .navlinks{display:none !important;position:absolute;top:calc(100% + 6px);right:0;flex-direction:column !important;align-items:stretch !important;gap:2px !important;background:#FFFFFF;border:1px solid rgba(0,0,0,.1);border-radius:12px;padding:8px !important;min-width:180px;box-shadow:0 14px 34px rgba(0,0,0,.14);z-index:20}
+    .navtoggle:checked ~ .navlinks{display:flex !important}
+    .navlinks a{padding:12px 14px;border-radius:8px}
+    .navlinks a:hover{background:#F3F3F6}
+    .navlinks > span{display:none !important}
+  }
+
+  /* Responsive safety net (works even if inline styles get respaced by the editor) */
+  img,video{max-width:100%}
+  @media (max-width:720px){x-dc > div[style*="max-width"],x-dc > div > div[style*="max-width"],#dc-root > div[style*="max-width"],#dc-root > div > div[style*="max-width"]{padding-left:22px !important;padding-right:22px !important}[style*="font-size:34px"],[style*="font-size: 34px"],[style*="font-size:32px"],[style*="font-size: 32px"]{font-size:26px !important}[style*="padding:52px"],[style*="padding: 52px"]{padding:30px 26px !important}[style*="padding:88px 0 20px"],[style*="padding: 88px 0 20px"],[style*="padding: 88px 0px 20px"]{padding-top:56px !important}[style*="padding:70px 0"],[style*="padding: 70px 0px"]{padding-top:44px !important;padding-bottom:44px !important}[style*="margin-bottom:80px"],[style*="margin: 0 0 80px"],[style*="margin-bottom: 80px"],[style*="margin: 0px 0px 80px"]{margin-bottom:56px !important}[style*="padding:76px 0 50px"],[style*="padding: 76px 0px 50px"]{padding:52px 0 36px !important}[style*="min-width:320px"],[style*="min-width: 320px"]{min-width:0 !important}
+    blockquote{font-size:19px !important;padding-left:20px !important}
+    blockquote span{font-size:inherit !important}
+  }
+  @media (max-width:400px){
+    h1{font-size:40px !important}
+    h2{font-size:30px !important}[style*="repeat(4"]{grid-template-columns:1fr 1fr !important;gap:18px !important}
+  }
+</style>
+</helmet>
+
+<div style="max-width:1180px;margin:0 auto;padding:0 40px">
+
+  <!-- top bar -->
+  <div style="display:flex;justify-content:space-between;align-items:center;padding:28px 0;border-bottom:1px solid rgba(0,0,0,.1);position:relative">
+    <div style="font-family:'Roboto';font-weight:700;font-size:16px;letter-spacing:-.01em">BRENDA S.</div>
+    <input type="checkbox" id="navtoggle" class="navtoggle">
+    <label for="navtoggle" class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></label>
+    <div class="navlinks" style="display:flex;align-items:center;gap:26px;font-size:13.5px;font-weight:500;color:#55555F">
+      <a href="#work" style="transition:color .2s" style-hover="color:#6D4AFF">Work</a>
+      <a href="#contact" style="transition:color .2s" style-hover="color:#6D4AFF">Contact</a>
+      <span style="width:11px;height:11px;border-radius:50%;background:#6D4AFF"></span>
+    </div>
+  </div>
+
+  <!-- hero -->
+  <div style="padding:96px 0 90px;position:relative;display:flex;align-items:center;gap:64px;flex-wrap:wrap">
+    <div style="flex:1 1 480px;min-width:320px">
+    <div style="display:inline-flex;align-items:center;gap:9px;font-size:12.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#6D4AFF;margin-bottom:30px"><span style="width:28px;height:1px;background:#6D4AFF"></span>Service Designer</div>
+    <h1 style="font-family: Space Grotesk; font-weight: 900; font-size: 92px; line-height: .98; letter-spacing: -.025em; margin: 0 0 36px">Hi, I am<br><span style="color: #00FFB6; font-family: Roboto">Brenda</span></h1>
+    <p style="font-size:23px;line-height:1.55;max-width:34ch;margin:0 0 14px;color:#55555F">I connect the dots through <strong style="font-weight:700">research triangulation<span style="color:#6D4AFF">*</span> to help organisations make informed, impactful decisions</strong> that align <span style="color:#16161C">business strategy, customer needs and environmental responsibility</span>.</p>
+    <p style="font-size:13px;line-height:1.5;max-width:52ch;margin:0 0 40px;color:#8C8C96"><span style="color:#6D4AFF">*</span>Research triangulation: the practice of using multiple methods, data sources, theories or investigators to study the same phenomenon.</p>
+    <a class="btn" href="Resume.dc.html" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 12px; color: #FFFFFF; font-weight: 700; font-size: 16px; padding: 19px 34px; border-radius: 9px; background-color: #000000">Download résumé <span style="font-size:18px">↓</span></a>
+    </div>
+    <div style="flex:none;position:relative;width:340px;height:420px;margin-right:18px">
+      <div style="position:absolute;right:-18px;top:26px;width:100%;height:100%;border-radius:120px 28px 120px 28px;background:#00FFB6"></div>
+      <div style="position:absolute;inset:0;border-radius:120px 28px 120px 28px;overflow:hidden;background:#6D4AFF">
+        <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="brenda-profile" shape="rect" placeholder="Drop your profile photo" hint-size="100%,100%"></x-import>
+      </div>
+      <div style="position:absolute;left:-22px;bottom:34px;background:#16161C;color:#FFFFFF;font-family:'Roboto';font-weight:600;font-size:13px;letter-spacing:.04em;padding:11px 18px;border-radius:9px;box-shadow:0 10px 30px rgba(0,0,0,.18)">Adelaide, South Australia</div>
+    </div>
+  </div>
+
+  <!-- projects -->
+  <div id="work" style="padding:40px 0 30px;scroll-margin-top:20px">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:26px">
+      <div style="font-family:'Roboto';font-weight:500;font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:#8C8C96">03 / Selected work</div>
+      <div style="font-size:13px;color:#8C8C96">Click a project to open its case study</div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:16px">
+
+      <a class="pj" href="Fintech.dc.html" style="display:flex;align-items:stretch;background:#F3F3F6;border-radius:16px;overflow:hidden;border:1px solid rgba(0,0,0,.09)">
+        <div style="flex:none;width:158px;background:#6D4AFF;color:#FFFFFF;display:flex;flex-direction:column;justify-content:space-between;padding:26px">
+          <span style="font-family:'Roboto';font-weight:900;font-size:42px;line-height:1">01</span>
+          <span style="font-weight:700;font-size:12px;letter-spacing:.08em;text-transform:uppercase">Fintech</span>
+        </div>
+        <div style="padding:30px 34px;flex:1">
+          <div style="font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#8C8C96;margin-bottom:10px">Interbank · User Research</div>
+          <div style="font-family:'Roboto';font-weight:700;font-size:26px;margin-bottom:12px">Financial Inclusion</div>
+          <div style="font-size:15.5px;line-height:1.55;color:#55555F;max-width:62ch">How might we offer a valuable financial alternative to people dissatisfied with the current formal financial system?</div>
+          <div class="arrow" style="font-size:13.5px;font-weight:700;color:#6D4AFF;margin-top:18px;display:inline-block">Open case study →</div>
+        </div>
+      </a>
+
+      <a class="pj" href="Aviation.dc.html" style="display:flex;align-items:stretch;background:#F3F3F6;border-radius:16px;overflow:hidden;border:1px solid rgba(0,0,0,.09)">
+        <div style="flex: none; width: 158px; color: #0C0E0D; display: flex; flex-direction: column; justify-content: space-between; padding: 26px; background-color: #262B87">
+          <span style="font-family: 'Roboto'; font-weight: 900; font-size: 42px; line-height: 1; color: #FFFFFF">02</span>
+          <span style="font-weight: 700; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: #FFFFFF">Aviation</span>
+        </div>
+        <div style="padding:30px 34px;flex:1">
+          <div style="font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#8C8C96;margin-bottom:10px">Riga Int'l Airport · Service Designer</div>
+          <div style="font-family:'Roboto';font-weight:700;font-size:26px;margin-bottom:12px">Airport Experience</div>
+          <div style="font-size:15.5px;line-height:1.55;color:#55555F;max-width:62ch">A growing Northern European hub wanted happier passengers. How do we make waiting time more enjoyable?</div>
+          <div class="arrow" style="font-size: 13.5px; font-weight: 700; color: #6D4AFF; margin-top: 18px; display: inline-block">Open case study →</div>
+        </div>
+      </a>
+
+      <a class="pj" href="Housing.dc.html" style="display:flex;align-items:stretch;background:#F3F3F6;border-radius:16px;overflow:hidden;border:1px solid rgba(0,0,0,.09)">
+        <div style="flex: none; width: 158px; color: #0C0E0D; display: flex; flex-direction: column; justify-content: space-between; padding: 26px; background-color: #3D06F4">
+          <span style="font-family: 'Roboto'; font-weight: 900; font-size: 42px; line-height: 1; color: #FFFFFF">03</span>
+          <span style="font-weight: 700; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: #FFFFFF">Housing</span>
+        </div>
+        <div style="padding:30px 34px;flex:1">
+          <div style="font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#8C8C96;margin-bottom:10px">Tallinn City · Service Designer</div>
+          <div style="font-family:'Roboto';font-weight:700;font-size:26px;margin-bottom:12px">Affordable Housing</div>
+          <div style="font-size:15.5px;line-height:1.55;color:#55555F;max-width:62ch">Tallinn's housing is neither affordable nor sustainable. How do we secure housing for younger generations before 2040?</div>
+          <div class="arrow" style="font-size:13.5px;font-weight:700;color:#8A6BF2;margin-top:18px;display:inline-block">Open case study →</div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</div>
+
+<!-- contact -->
+<div id="contact" style="color: #0C0E0D; margin-top: 90px; scroll-margin-top: 0; background-color: #00FFB6">
+  <div style="max-width:1180px;margin:0 auto;padding:96px 40px">
+    <h2 style="font-family:'Roboto';font-weight:900;font-size:60px;line-height:1.04;letter-spacing:-.025em;margin:0 0 42px;max-width:15ch">Have a challenge? Let's solve it together!</h2>
+    <div style="display:flex;gap:16px;flex-wrap:wrap">
+      <a class="btn" href="https://www.linkedin.com/in/brenda-salazar-monaca/" target="_blank" style="display: inline-flex; align-items: center; gap: 11px; color: #FFFFFF; font-weight: 700; font-size: 16px; padding: 19px 34px; border-radius: 9px; background-color: #000000">LinkedIn ↗</a>
+      <a class="btn" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=brendamonaca@gmail.com" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:11px;background:transparent;border:2px solid #0C0E0D;color:#0C0E0D;font-weight:700;font-size:16px;padding:17px 32px;border-radius:9px">brendamonaca@gmail.com</a>
+    </div>
+  </div>
+</div>
+<div style="max-width:1180px;margin:0 auto;padding:24px 40px;font-size:12.5px;color:#8C8C96;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px"><span>© 2026 Brenda Salazar</span><span>Service Design Portfolio</span></div>
+</x-dc>
+</body>
+</html>

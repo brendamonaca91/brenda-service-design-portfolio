@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+<template id="__bundler_thumbnail" data-bg-color="#6D4AFF">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#6D4AFF"/>
+    <text x="600" y="360" font-family="Roboto, sans-serif" font-weight="900" font-size="150" fill="#FFFFFF" text-anchor="middle">FI</text>
+    <text x="600" y="470" font-family="Roboto, sans-serif" font-weight="500" font-size="42" letter-spacing="6" fill="#FFFFFF" text-anchor="middle" opacity="0.85">FINANCIAL INCLUSION</text>
+  </svg>
+</template>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics="">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+  html{scroll-behavior:smooth}
+  body{margin:0;background:#FFFFFF;color:#16161C;font-family:'Space Grotesk',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  a.back:hover{color:#6D4AFF}
+  a.btn{transition:transform .2s ease}
+  a.btn:hover{transform:translateY(-2px)}
+  a.nextp:hover{border-color:#6D4AFF !important}
+  a.nextp:hover .na{transform:translateX(6px)}
+  .na{transition:transform .25s ease}
+
+  @media (max-width:720px){[style*="margin:0 auto"],[style*="margin: 0px auto"]{padding-left:22px !important;padding-right:22px !important}
+    h1{font-size:46px !important}
+    h2{font-size:34px !important}[style*="repeat(4"]{grid-template-columns:repeat(2,1fr) !important}[style*="repeat(3"]{grid-template-columns:1fr !important;height:auto !important}[style*="repeat(3"] > *{margin-top:0 !important}[style*="1fr 1fr"]{grid-template-columns:1fr !important}[style*="gap:56px"],[style*="gap: 56px"]{gap:32px !important}
+    .fin-pair{grid-template-columns:1fr !important;gap:24px !important;max-width:420px;margin-left:auto !important;margin-right:auto !important}
+    .fin-pic{margin-top:0 !important}
+    .fin-gap{display:none}
+  }
+
+  /* Responsive safety net (works even if inline styles get respaced by the editor) */
+  img,video{max-width:100%}
+  @media (max-width:720px){x-dc > div[style*="max-width"],x-dc > div > div[style*="max-width"],#dc-root > div[style*="max-width"],#dc-root > div > div[style*="max-width"]{padding-left:22px !important;padding-right:22px !important}[style*="font-size:34px"],[style*="font-size: 34px"],[style*="font-size:32px"],[style*="font-size: 32px"]{font-size:26px !important}[style*="padding:52px"],[style*="padding: 52px"]{padding:30px 26px !important}[style*="padding:88px 0 20px"],[style*="padding: 88px 0 20px"],[style*="padding: 88px 0px 20px"]{padding-top:56px !important}[style*="padding:70px 0"],[style*="padding: 70px 0px"]{padding-top:44px !important;padding-bottom:44px !important}[style*="margin-bottom:80px"],[style*="margin: 0 0 80px"],[style*="margin-bottom: 80px"],[style*="margin: 0px 0px 80px"]{margin-bottom:56px !important}[style*="padding:76px 0 50px"],[style*="padding: 76px 0px 50px"]{padding:52px 0 36px !important}[style*="min-width:320px"],[style*="min-width: 320px"]{min-width:0 !important}
+    blockquote{font-size:19px !important;padding-left:20px !important}
+    blockquote span{font-size:inherit !important}
+  }
+  @media (max-width:400px){
+    h1{font-size:40px !important}
+    h2{font-size:30px !important}[style*="repeat(4"]{grid-template-columns:1fr 1fr !important;gap:18px !important}
+  }
+</style>
+<script>
+(function(){
+  function wire(){
+    var v=document.getElementById('fin-sol-video');
+    var b=document.getElementById('fin-sol-mute');
+    if(!v||!b){return setTimeout(wire,120);}
+    if(b.dataset.wired)return;
+    b.dataset.wired='1';
+    var on='<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg>';
+    var off='<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4z"/><line x1="22" y1="9" x2="16" y2="15"/><line x1="16" y1="9" x2="22" y2="15"/></svg>';
+    v.muted=true;
+    v.setAttribute('muted','');
+    v.defaultMuted=true;
+    var kick=function(){ v.muted=true; if(v.paused){ var p=v.play&&v.play(); if(p&&p.catch)p.catch(function(){}); } };
+    kick();
+    v.addEventListener('loadedmetadata',kick);
+    v.addEventListener('canplay',kick);
+    b.innerHTML=off;
+    b.addEventListener('click',function(){
+      v.muted=!v.muted;
+      if(!v.muted){v.play&&v.play();}
+      b.innerHTML=v.muted?off:on;
+    });
+  }
+  wire();
+})();
+</script>
+</helmet>
+
+<div style="max-width:1000px;margin:0 auto;padding:0 40px">
+
+  <!-- top bar -->
+  <div style="display:flex;justify-content:space-between;align-items:center;padding:28px 0;border-bottom:1px solid rgba(0,0,0,.1)">
+    <div style="font-family:'Roboto';font-weight:700;font-size:16px">BRENDA S.</div>
+    <a class="back" href="Portfolio.dc.html" style="font-size:13.5px;font-weight:600;color:#55555F;transition:color .2s">← All work</a>
+  </div>
+
+  <!-- hero -->
+  <div style="padding:76px 0 50px">
+    <div style="display:inline-flex;align-items:center;gap:9px;font-size:12.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#6D4AFF;margin-bottom:28px"><span style="width:28px;height:1px;background:#6D4AFF"></span>01 · Fintech</div>
+    <h1 style="font-family:'Roboto';font-weight:900;font-size:70px;line-height:1;letter-spacing:-.025em;margin:0 0 26px">Financial<br>Inclusion</h1>
+    <p style="font-size:20px;line-height:1.55;color:#55555F;max-width:44ch;margin:0">Redesigning how underserved communities access and trust financial services.</p>
+  </div>
+
+  <!-- meta -->
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding:30px 0;border-top:1px solid rgba(0,0,0,.1);border-bottom:1px solid rgba(0,0,0,.1)">
+    <div><div style="font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#8C8C96;margin-bottom:8px">Client</div><div style="font-size:15.5px;font-weight:600">Interbank</div></div>
+    <div><div style="font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#8C8C96;margin-bottom:8px">Role</div><div style="font-size:15.5px;font-weight:600">User Research</div></div>
+    <div><div style="font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#8C8C96;margin-bottom:8px">Sector</div><div style="font-size:15.5px;font-weight:600">Financial Services</div></div>
+    <div><div style="font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#8C8C96;margin-bottom:8px">Focus</div><div style="font-size:15.5px;font-weight:600">Box 3 solution — entirely new services to capture future markets</div></div>
+  </div>
+</div>
+
+<!-- hero image -->
+<div style="max-width:1000px;margin:44px auto 0;padding:0 40px">
+  <div style="position:relative;width:100%;aspect-ratio:16/8;border-radius:16px;overflow:hidden;background:#F3F3F6">
+    <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="fin-hero" shape="rect" placeholder="Drop a hero image — project photo, prototype or key visual" hint-size="100%,100%"></x-import>
+  </div>
+</div>
+
+<div style="max-width:1000px;margin:0 auto;padding:0 40px">
+
+  <!-- challenge -->
+  <div style="padding: 88px 0 20px">
+    <div style="font-family:'Roboto';font-weight:500;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:#6D4AFF;margin-bottom:24px">The challenge</div><p style="font-family:'Roboto';font-weight:500;font-size:34px;line-height:1.28;letter-spacing:-.01em;margin:0;max-width:34ch">How might we offer a valuable financial alternative to people who are dissatisfied with the current formal financial system?</p>
+    
+  </div>
+
+  <!-- approach 2-col -->
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:56px;padding:70px 0">
+    <div>
+      <div style="font-family:'Roboto';font-weight:500;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:#8C8C96;margin-bottom:20px">My approach</div>
+      <p style="font-size:17px;line-height:1.65;color:#55555F;margin:0">I led qualitative research to understand why people opt out of the formal financial system — mapping their money habits, informal alternatives, and moments of distrust.</p>
+      
+    </div>
+    <div>
+      <div style="font-family:'Roboto';font-weight:500;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:#8C8C96;margin-bottom:20px">WHAT WE DID</div>
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <div style="display:flex;gap:14px;align-items:baseline"><span style="color:#6D4AFF;font-weight:700">01</span><span style="font-size:16px;line-height:1.5">In-depth interviews &amp; workshops</span></div>
+        <div style="display:flex;gap:14px;align-items:baseline"><span style="color:#6D4AFF;font-weight:700">02</span><span style="font-size:16px;line-height:1.5">Journey &amp; ecosystem mapping</span></div>
+        <div style="display:flex;gap:14px;align-items:baseline"><span style="color:#6D4AFF;font-weight:700">03</span><span style="font-size:16px;line-height:1.5">Sacrificial concepts</span></div>
+        <div style="display:flex;gap:14px;align-items:baseline"><span style="color:#6D4AFF;font-weight:700">04</span><span style="font-size:16px;line-height:1.5">A/B testing</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- full-width quote -->
+  <blockquote style="font-family:'Roboto';font-weight:500;font-size:22px;line-height:1.35;letter-spacing:-.01em;color:#6D4AFF;margin:0 0 70px;padding-left:28px;border-left:4px solid #6D4AFF;text-align:left">Six out of ten Peruvians sit outside the formal financial system (INEI, 2023) — not because they lack financial needs, but because they don't trust the institutions meant to serve them. Banks are seen as bureaucratic, rigid, and quick to say no.</blockquote>
+
+  <!-- process image -->
+  <div style="position:relative;width:100%;aspect-ratio:16/7;border-radius:16px;overflow:hidden;background:#F3F3F6;margin-bottom:24px">
+    <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="fin-1" shape="rect" placeholder="Drop a research artifact — journey map, affinity wall, quotes" hint-size="100%,100%"></x-import>
+  </div>
+  <div style="height:46px"></div>
+
+  <!-- outcome -->
+  <div style="border-left:3px solid #6D4AFF;padding:8px 0 8px 32px;margin-bottom:80px">
+    <div style="font-family:'Roboto';font-weight:500;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:#6D4AFF;margin-bottom:22px">Who we were designing for</div>
+    <p style="font-size:17px;line-height:1.65;color:#55555F;margin:0;max-width:none">We focused on the <strong style="font-weight:700">underbanked</strong>: people who technically hold a bank account but rely heavily on informal financial networks — family loans, community savings groups, cash — to actually meet their needs. On paper, they're "included." In practice, the formal system isn't working for them.</p>
+  </div>
+
+  <!-- gallery -->
+  
+
+  <!-- next project -->
+  
+
+  <!-- next project -->
+  
+
+  <!-- insights -->
+  <div class="fin-pair" style="display:grid;grid-template-columns:repeat(3,1fr);gap:28px;align-items:start;margin:0 0 80px">
+    <div class="fin-pic" style="position:relative;width:100%;aspect-ratio:10/9;margin-top:56px">
+      <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="fin-ch-2" shape="rounded" radius="14" fit="contain" placeholder="Drop an image" hint-size="100%,100%"></x-import>
+    </div>
+    <div class="fin-gap"></div>
+    <div class="fin-pic" style="position:relative;width:100%;aspect-ratio:10/9">
+      <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="fin-ch-3" shape="rounded" radius="14" fit="contain" placeholder="Drop an image" hint-size="100%,100%"></x-import>
+    </div>
+  </div><div style="padding:0 0 80px">
+    <div style="font-family:'Roboto';font-weight:500;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:#6D4AFF;margin-bottom:28px">Insights</div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:28px">
+      <div style="border-top:2px solid #6D4AFF;padding-top:20px">
+        <div style="font-family:'Roboto';font-weight:700;font-size:20px;margin-bottom:10px">Trust is the real currency</div>
+        <p style="font-size:16px;line-height:1.55;color:#55555F;margin:0">People are open to new ways of banking, but only from institutions with an established, credible reputation.</p>
+      </div>
+      <div style="border-top:2px solid #6D4AFF;padding-top:20px">
+        <div style="font-family:'Roboto';font-weight:700;font-size:20px;margin-bottom:10px">Rigidity is the deal-breaker</div>
+        <p style="font-size:16px;line-height:1.55;color:#55555F;margin:0">Formal financial products don't flex the way people's real lives do. The informal networks people already rely on succeed precisely because they <em>do</em> adapt.</p>
+      </div>
+      <div style="border-top:2px solid #6D4AFF;padding-top:20px">
+        <div style="font-family:'Roboto';font-weight:700;font-size:20px;margin-bottom:10px">Independent workers are an overlooked, sizeable opportunity</div>
+        <p style="font-size:16px;line-height:1.55;color:#55555F;margin:0">Peru has 7.8 million independent workers (INEI, 2017) who are actively dissatisfied with traditional banking, have real economic capacity and are already comfortable with digital tools.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- the solution -->
+  <div style="padding:0 0 80px">
+    <div style="font-family:'Roboto';font-weight:500;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:#6D4AFF;margin-bottom:28px">The Solution</div>
+    
+    <p style="font-size: 20px; font-weight: 400; line-height: 1.6; color: #55555F; margin: 0 0 40px; max-width: none; width: 100%">We designed Freelea, a platform that connects freelancers with job opportunities while creating a verified record of completed work and payments. By building a trusted financial history, freelancers can strengthen their credibility and gain access to credit and other financial opportunities traditionally out of reach.</p><div style="position:relative;width:100%;max-width:540px;margin-left:auto;margin-right:auto;aspect-ratio:1/1;border-radius:16px;overflow:hidden;background:#111118">
+      <video id="fin-sol-video" autoplay="" muted="" loop="" playsinline="" src="assets/Freelea_Emp_2-1.mp4?v=2" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:#111118"></video>
+      <button id="fin-sol-mute" type="button" aria-label="Toggle sound" style="position:absolute;bottom:14px;right:14px;width:42px;height:42px;display:flex;align-items:center;justify-content:center;border:none;border-radius:50%;background:rgba(0,0,0,.55);color:#fff;cursor:pointer;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);transition:background .2s" style-hover="background:rgba(0,0,0,.78)"></button>
+    </div>
+    <p style="font-size:13px;color:#8C8C96;margin:14px 0 0;text-align:center">Freelea — social media ad</p>
+  </div>
+
+  <!-- outcomes & reflections -->
+  <div style="padding:0 0 80px">
+    <div style="font-family:'Roboto';font-weight:500;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:#6D4AFF;margin-bottom:28px">Outcomes &amp; reflections</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:56px">
+      <div>
+        <div style="font-family:'Roboto';font-weight:700;font-size:20px;margin-bottom:12px">Outcomes</div>
+        <p style="font-size:17px;line-height:1.65;color:#55555F;margin:0">Freelea validated a real, sizeable need and won early internal support, but it was shut down after roughly a year. The concept depended on a two-sided model — freelancers on one side, employers posting verified work on the other — and no marketing team was ever allocated to build the employer side of the platform. Without that supply of verified jobs and payments, the financial-history engine that gave the product its value couldn't function, and the project was ultimately killed.</p>
+      </div>
+      <div>
+        <div style="font-family:'Roboto';font-weight:700;font-size:20px;margin-bottom:12px">Reflections</div>
+        <p style="font-size:17px;line-height:1.65;color:#55555F;margin:0">The sharpest lesson from this project was that financial inclusion isn't a product problem first — it's a trust problem. The most elegant platform in the world doesn't matter if it hasn't earned the same confidence people place in their informal networks.</p>
+      </div>
+    </div>
+  </div>
+
+  <a class="nextp" href="Aviation.dc.html" style="display:flex;justify-content:space-between;align-items:center;padding:38px 0;border-top:1px solid rgba(0,0,0,.1)">
+    <div><div style="font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#8C8C96;margin-bottom:8px">Next project</div><div style="font-family:'Roboto';font-weight:700;font-size:30px">Airport Experience</div></div>
+    <div class="na" style="font-size:34px;color:#6D4AFF">→</div>
+  </a>
+</div>
+
+<!-- contact -->
+<div style="color: #0C0E0D; margin-top: 40px; background-color: #00FFB6">
+  <div style="max-width:1000px;margin:0 auto;padding:84px 40px">
+    <h2 style="font-family:'Roboto';font-weight:900;font-size:50px;line-height:1.06;letter-spacing:-.02em;margin:0 0 36px;max-width:15ch">Have a challenge? Let's solve it together!</h2>
+    <div style="display:flex;gap:16px;flex-wrap:wrap">
+      <a class="btn" href="https://www.linkedin.com/in/brenda-salazar-monaca/" target="_blank" style="display:inline-flex;align-items:center;gap:11px;background:#16161C;color:#FFFFFF;font-weight:700;font-size:16px;padding:18px 32px;border-radius:9px">LinkedIn ↗</a>
+      <a class="btn" href="mailto:brendamonaca@gmail.com" style="display:inline-flex;align-items:center;gap:11px;background:transparent;border:2px solid #0C0E0D;color:#0C0E0D;font-weight:700;font-size:16px;padding:16px 30px;border-radius:9px">brendamonaca@gmail.com</a>
+    </div>
+  </div>
+</div>
+</x-dc>
+</body>
+</html>
